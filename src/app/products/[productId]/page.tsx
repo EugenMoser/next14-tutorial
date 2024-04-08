@@ -1,5 +1,5 @@
 interface ProductDetailsProps {
-  params: { productId: number };
+  params: { productId: string };
 }
 
 function ProductDetails({ params }: ProductDetailsProps): JSX.Element {
