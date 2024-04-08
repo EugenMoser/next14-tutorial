@@ -1,7 +1,7 @@
 interface ProfileProps {}
 
 function Profile({}: ProfileProps): JSX.Element {
-  return <div>Profile</div>;
+  return <h1>Profile</h1>;
 }
 
 export default Profile;
