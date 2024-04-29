@@ -1,5 +1,6 @@
-import ErrorBoundary from "./error";
-import { notFound } from "next/navigation";
+'use client';
+
+import { notFound } from 'next/navigation';
 
 interface ReviewProps {
   params: { productId: string; reviewId: string };
@@ -13,7 +14,8 @@ function Review({ params }: ReviewProps): JSX.Element {
   const random = getRandomInt(2);
 
   if (random === 1) {
-    throw new Error("Error loading review");
+    // wird in der error.tsx abgefangen
+    throw new Error('Error loading review');
   }
 
   if (parseInt(params.reviewId) > 1000) {
