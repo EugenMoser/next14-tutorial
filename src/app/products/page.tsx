@@ -1,9 +1,17 @@
+'use client';
 import Link from 'next/link';
 
 interface ProductListProps {}
-
+function getRandomInt(count: number) {
+  return Math.floor(Math.random() * count);
+}
 function ProductList({}: ProductListProps): JSX.Element {
   const productId = 100;
+  const random = getRandomInt(2);
+  if (random === 1) {
+    // wird in der error.tsx abgefangen
+    throw new Error('Error products loading');
+  }
   return (
     <>
       <Link href='/'>Home</Link>
