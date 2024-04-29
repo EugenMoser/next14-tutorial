@@ -11,12 +11,12 @@ function getRandomInt(count: number) {
 }
 
 function Review({ params }: ReviewProps): JSX.Element {
-  const random = getRandomInt(2);
+  // const random = getRandomInt(2);
 
-  if (random === 1) {
-    // wird in der error.tsx abgefangen
-    throw new Error('Error loading review');
-  }
+  // if (random === 1) {
+  //   // wird in der error.tsx abgefangen
+  //   throw new Error('Error loading review');
+  // }
 
   if (parseInt(params.reviewId) > 1000) {
     notFound();
