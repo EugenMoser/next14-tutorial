@@ -3,17 +3,11 @@ interface CardProps {
 }
 
 function Card({ children }: CardProps): JSX.Element {
-  const cardStyle = {
-    padding: '100px',
-    margin: '10px',
-    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-    border: '1px solid #ddd',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  };
-
-  return <div style={cardStyle}>{children}</div>;
+  return (
+    <div className='p-16 m-4 shadow-cx border border-gray-300 flex flex-col justify-center items-center'>
+      {children}
+    </div>
+  );
 }
 
 export default Card;

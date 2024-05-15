@@ -1,30 +1,33 @@
-import Card from '@/components/card';
-
 interface DashboardLayoutProps {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: JSX.Element;
 }
 
 function DashboardLayout({
   children,
+  login,
   users,
   revenue,
   notifications,
 }: DashboardLayoutProps): JSX.Element {
-  return (
+  const isLoggedIn: boolean = true;
+  return isLoggedIn ? (
     <>
-      <div>{children}</div>{' '}
+      <div>{children}</div>
       {/* equivalent to complex-dashboard/@children/page.tsx */}
-      <div style={{ display: 'flex' }}>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className='flex'>
+        <div className='flex flex-col'>
           <div>{users}</div>
           <div>{revenue}</div>
         </div>
-        <div style={{ display: 'flex', flex: 1 }}>{notifications}</div>
+        <div className='flex flex-1'>{notifications}</div>
       </div>
     </>
+  ) : (
+    login
   );
 }
 

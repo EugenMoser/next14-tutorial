@@ -13,6 +13,9 @@ const config: Config = {
       lg: '1024px',
       xl: '1280px',
     },
+    boxShadow: {
+      cx: '10px 10px 10px 10px rgba(211, 211, 211, 0.5)',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <header className='bg-gray-100 p-4'>Header</header>
+        <header className='bg-gray-200 p-4'>Header</header>
         {children}
-        <footer className='bg-red p-4'>Footer</footer>
+        <footer className='bg-red-200 p-4'>Footer</footer>
       </body>
     </html>
   );
