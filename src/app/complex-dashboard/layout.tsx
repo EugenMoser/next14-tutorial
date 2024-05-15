@@ -13,7 +13,7 @@ function DashboardLayout({
   revenue,
   notifications,
 }: DashboardLayoutProps): JSX.Element {
-  const isLoggedIn: boolean = true;
+  const isLoggedIn: boolean = false;
   return isLoggedIn ? (
     <>
       <div>{children}</div>
