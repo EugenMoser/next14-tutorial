@@ -1,8 +1,13 @@
 // default server component
+import { cookies } from 'next/headers';
 
 interface AboutProps {}
 
 function About({}: AboutProps): JSX.Element {
+  const cookiesStore = cookies();
+
+  const theme = cookiesStore.get('theme');
+  console.log('theme', theme);
   console.log('About server Compoenent');
   return (
     <>
