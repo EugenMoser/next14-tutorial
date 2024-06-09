@@ -1,4 +1,5 @@
 import ImageSlider from '@/components/image-slider';
+import { useTheme } from '@/components/theme-provider';
 
 // import { serverSideFunction } from '@/utils/server-utils';
 
