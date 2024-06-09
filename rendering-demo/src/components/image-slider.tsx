@@ -1,24 +1,17 @@
 'use client';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import Slider from 'react-slick';
 
-// import { serverSideFunction } from '@/utils/server-utils';
+interface ImageSliderProps {}
 
-interface ClientRouteProps {}
-
-function ClientRoute({}: ClientRouteProps): JSX.Element {
-  console.log('Client route rendered');
-  // const result = serverSideFunction();
+function ImageSlider({}: ImageSliderProps): JSX.Element {
   const settings = {
     dots: true,
   };
   return (
     <>
-      <h1>Client side route Page</h1>
-
       <div className='image-slider-container'>
         <Slider {...settings}>
           <div>
@@ -39,4 +32,4 @@ function ClientRoute({}: ClientRouteProps): JSX.Element {
   );
 }
 
-export default ClientRoute;
+export default ImageSlider;
