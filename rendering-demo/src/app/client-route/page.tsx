@@ -1,11 +1,6 @@
 'use client';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import Slider from 'react-slick';
-
-import { useTheme } from '@/components/theme-provider';
+import { clientSideFunction } from '@/utils/client-utils';
 
 // import { serverSideFunction } from '@/utils/server-utils';
 
@@ -13,33 +8,12 @@ interface ClientRouteProps {}
 
 function ClientRoute({}: ClientRouteProps): JSX.Element {
   console.log('Client route rendered');
-  const theme = useTheme();
-  // const result = serverSideFunction();
-  const settings = {
-    dots: true,
-  };
+  const result = clientSideFunction();
+
   return (
     <>
-      <h1 style={{ color: theme.colors.primary }}>
-        Client side route Page
-      </h1>
-
-      <div className='image-slider-container'>
-        <Slider {...settings}>
-          <div>
-            <img src='http://picsum.photos/g/400/200' />
-          </div>
-          <div>
-            <img src='http://picsum.photos/g/400/200' />
-          </div>
-          <div>
-            <img src='http://picsum.photos/g/400/200' />
-          </div>
-          <div>
-            <img src='http://picsum.photos/g/400/200' />
-          </div>
-        </Slider>
-      </div>
+      <h1>Client side route Page</h1>
+      <p>{result}</p>
     </>
   );
 }
