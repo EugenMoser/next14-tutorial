@@ -1,3 +1,5 @@
+import { resolve } from 'path';
+
 type UsersProps = {
   id: number;
   name: string;
@@ -8,7 +10,7 @@ type UsersProps = {
 
 async function UsersPage(): Promise<JSX.Element> {
   const response = await fetch(
-    'https://jsonplaceholder.typicode.com/users'
+    'https://jsonplaceholder.typicode.com/users999'
   );
   const users = await response.json();
   console.log(users);
